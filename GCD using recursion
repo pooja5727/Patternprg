@@ -1,0 +1,19 @@
+#include <stdio.h>
+int GCD(int,int);
+int main() {
+	//code
+	int a,b,r;
+	scanf("%d%d",&a,&b);
+	r=GCD(a,b);
+	printf("%d",r);
+return 0;
+}	
+	int GCD(int m,int n)
+	{
+	    if(n==0)
+	    return(m);
+	    else if(m<n)
+	    return GCD(n,m);
+	    else
+	    return GCD(n,m%n);
+	}
